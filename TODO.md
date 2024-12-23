@@ -8,7 +8,6 @@
 
 ## **2. Coleta ou Criação de Dataset**
 - [ ] Escolher a fonte do dataset:
-  - [ ] Utilizar imagens capturadas pelo Donkey Car.
   - [ ] Procurar datasets públicos em plataformas como Kaggle ou Google Dataset Search.
   - [ ] Criar o próprio dataset, capturando imagens e rotulando-as manualmente.
 - [ ] Garantir que o dataset esteja balanceado (quantidade similar de imagens por categoria).
