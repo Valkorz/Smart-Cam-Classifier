@@ -12,6 +12,7 @@ def main():
         ret, frame = cap.read()
         if not ret:
             break
+
         results = detect_objects(frame)
 
         show_frame(frame, results)
@@ -19,12 +20,20 @@ def main():
         # Exemplo de ação: salvar imagem se detectar pessoas
         for r in results:
             for box in r.boxes:
-                if cls == 'person' and box.conf[0] > config.CONFIDENCE_THRESHOLD:
+                cls_id = int(box.cls[0])
+                cls_name = r.names[cls_id]
+                confidence = box.conf[0]
+
+                print(f"Detecção: {cls_name} com confiança de {confidence: .2f}")
+
+                if confidence > config.CONFIDENCE_THRESHOLD:
                     save_frame(frame)
-                    send_alert("Pessoa detectada!")
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+                    send_alert(f"Objeto detectado: {cls_name}")
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            print("Encerrando...")
+            break
     release_camera(cap)
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
