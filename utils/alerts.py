@@ -1,3 +1,0 @@
-def send_alert(message):
-    print(f"Alerta enviado: {message}")
-    # Implementar envio de e-mail, Telegram, WhatsApp API etc / Implement shipping of e-mail...

@@ -4,15 +4,10 @@ import urllib.request
 # A fonte da câmera (0 para a webcam padrão) / The camera source (0 to the standard webcam)
 CAMERA_SOURCE = 0  
 # Limite de confiança para detectar objetos / Limit of confidence to detect objects
-CONFIDENCE_THRESHOLD = 0.80  
+CONFIDENCE_THRESHOLD = 0.95  
 
 # Função para instalar o modelo se não estiver presente / Function to install the model if it doesn't be present
 MODEL_PATH = "model/yolov8n.pt"
-
-# Habilita ou desabilita o salvamento de imagens / Apply or disable the rescue of images
-SAVE_FRAMES = True 
-
-FRAME_SAVE_PATH = "saved_frames/"
 
 def install_model(model_dir="model", model_file="yolov8n.pt"):
     # Caminho completo para o modelo / Completed path to the model

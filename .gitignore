@@ -1,0 +1,38 @@
+# Arquivos de Cache e Compilados do Python
+__pycache__/
+*.pyc 
+*.pyo 
+*.pyd
+
+# Ambientes Virtuais
+venv/
+env/
+.env
+
+# Arquivos de Pacotes e Distribuição do Python
+build/
+dist/
+*.egg-info/
+
+# Pasta de resultados do treinamento do YOLO
+
+# Arquivos de Dataset (IGNORAR APENAS AS IMAGENS)
+# Ignoramos as imagens para não sobrecarregar o repositório.
+# O dataset completo deve ser compartilhado por fora (ex: Google Drive).
+Dataset/cone+placas/train/images/
+Dataset/cone+placas/valid/images/
+Dataset/cone+placas/test/images/
+
+# Ignorar os arquivos .zip do dataset
+*.zip
+
+# Modelos de Machine Learning
+# Modelos base podem ser baixados e modelos treinados são gerados.
+# Manter o repositório leve.
+*.pt
+
+# Arquivos específicos do Sistema Operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
